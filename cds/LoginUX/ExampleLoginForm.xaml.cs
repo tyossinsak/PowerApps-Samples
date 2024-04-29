@@ -50,11 +50,11 @@ namespace PowerApps.Samples.LoginUX
         {
             InitializeComponent();
             //// Should be used for testing only.
-            //ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) =>
-            //{
-            //    MessageBox.Show("CertError");
-            //    return true;
-            //};
+            ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) =>
+	    {
+                MessageBox.Show("CertError");
+                return true;
+            };
         }
 
         /// <summary>
